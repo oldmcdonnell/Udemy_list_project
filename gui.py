@@ -43,7 +43,9 @@ while True:
                 todos = functions.get_todos()
                 index = todos.index(todo_to_edit)
                 todos[index] = new_todo
-                functions.write_todos(todos)
+                #print(type(new_todo))
+                #print(type(todos))
+                functions.write_todos(new_todo)
                 window['todos'].update(values=todos)
             except IndexError:
                 sg.popup("Select an items first", font=("helvetica", 20))
